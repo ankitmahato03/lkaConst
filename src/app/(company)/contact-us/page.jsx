@@ -44,7 +44,7 @@ const ContactUsPage = () => {
           {...fadeIn}
           transition={{ delay: 0.2 }}
         >
-          We're here to help and answer any question you might have. We look
+          We&apos;re here to help and answer any question you might have. We look
           forward to hearing from you.
         </motion.p>
 
