@@ -10,7 +10,7 @@ export default function AboutPage() {
           <div>
             <p className="text-xl text-gray-300 mb-8">
               LKA is a leading provider of comprehensive financial and business
-              solutions. Since our founding in 2010, we've been dedicated to
+              solutions. Since our founding in 2010, we&apos;ve been dedicated to
               empowering businesses and individuals with expert guidance,
               innovative strategies, and unwavering support.
             </p>
