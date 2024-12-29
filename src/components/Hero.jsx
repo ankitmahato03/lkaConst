@@ -2,6 +2,7 @@
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -39,7 +40,7 @@ export default function Hero() {
               size="lg"
               className="bg-[#1EE05B] hover:bg-[#19B84A] text-black font-bold"
             >
-              Book a free consultation
+              <Link href={"/contact-us"}>Book a free consultation</Link>
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </motion.div>
