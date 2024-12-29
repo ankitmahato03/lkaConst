@@ -116,7 +116,7 @@ const TermsAndConditionsPage = () => {
               <AccordionContent>
                 LKA agrees to maintain the confidentiality of client information
                 and to not disclose such information to third parties without
-                the client's consent, except as required by law or professional
+                the client&apos;s consent, except as required by law or professional
                 standards.
               </AccordionContent>
             </AccordionItem>
