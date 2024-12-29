@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { Shield, Lock, Eye, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -86,8 +87,8 @@ const PrivacyPolicyPage = () => {
           <p className="text-gray-300 mb-6">
             We may update this Privacy Policy from time to time. We will notify
             you of any changes by posting the new Privacy Policy on this page
-            and updating the &quot;Last Updated&quot; date at the top of this Privacy
-            Policy.
+            and updating the &quot;Last Updated&quot; date at the top of this
+            Privacy Policy.
           </p>
           <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
           <p className="text-gray-300 mb-6">
@@ -100,7 +101,7 @@ const PrivacyPolicyPage = () => {
             <li>Address: 123 Privacy Lane, Secure City, ST 12345</li>
           </ul>
           <Button className="bg-[#1EE05B] hover:bg-[#19B84A] text-black">
-            Contact Us
+            <Link href={"/contact-us"}>Contact Us</Link>
           </Button>
         </motion.div>
 

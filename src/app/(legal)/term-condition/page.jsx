@@ -10,6 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Link from "next/link";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -116,8 +117,8 @@ const TermsAndConditionsPage = () => {
               <AccordionContent>
                 LKA agrees to maintain the confidentiality of client information
                 and to not disclose such information to third parties without
-                the client&apos;s consent, except as required by law or professional
-                standards.
+                the client&apos;s consent, except as required by law or
+                professional standards.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
@@ -155,7 +156,7 @@ const TermsAndConditionsPage = () => {
             <li>Address: 456 Legal Avenue, Compliance City, ST 67890</li>
           </ul>
           <Button className="bg-[#1EE05B] hover:bg-[#19B84A] text-black">
-            Contact Us
+            <Link href={"/contact-us"}>Contact Us</Link>
           </Button>
         </motion.div>
 

@@ -119,26 +119,15 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-center items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {new Date().getFullYear()} LKA. All rights reserved. Design by
-              Averotec
+              © {new Date().getFullYear()} LKA. All rights reserved. Design by{" "}
+              <span>
+                <Link href={"https://www.averotec.com/"} target="_blank">
+                  Averotec
+                </Link>
+              </span>
             </p>
-            <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <p className="text-gray-400 text-sm">
-                Stay updated with our newsletter
-              </p>
-              <div className="flex">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="bg-[#2a2a2a] border-gray-700 text-white w-64 mr-2"
-                />
-                <Button className="bg-[#1EE05B] hover:bg-[#19B84A] text-black">
-                  Subscribe
-                </Button>
-              </div>
-            </div>
           </div>
         </motion.div>
       </div>

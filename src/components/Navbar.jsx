@@ -48,7 +48,7 @@ const Navbar = () => {
     {
       title: "Our Team",
       href: "/our-team",
-    }
+    },
   ];
   const services = [
     { title: "Auditing & Attest", href: "/auditing-attest" },
@@ -57,7 +57,7 @@ const Navbar = () => {
     { title: "Direct Taxation", href: "/direct-taxation" },
     { title: "Financial Advisory Services", href: "/financial-advisory" },
     { title: "Corporate Advisory", href: "/corporate-advisory" },
-    { title: "GST and Custom Duty", href: "/gst-custom" }
+    { title: "GST and Custom Duty", href: "/gst-custom" },
   ];
 
   return (
@@ -211,7 +211,7 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: (navItems.length + 1) * 0.1 }}
               >
-                Contact Us
+                <Link href={"/contact-us"}>Contact Us</Link>
               </motion.button>
             </div>
           </motion.div>
