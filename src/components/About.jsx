@@ -44,7 +44,7 @@ export default function About() {
                 <span className="text-[#1EE05B]"> Digital Reality</span>
               </h2>
               <p className="text-gray-400 text-lg">
-                Since 2010, we've been helping businesses transform their ideas
+                Since 2010, we&apos;ve been helping businesses transform their ideas
                 into powerful digital solutions. Our mission is to deliver
                 innovation that matters.
               </p>
