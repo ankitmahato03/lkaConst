@@ -1,0 +1,46 @@
+{
+  "services": [
+    {
+      "icon": "Clipboard",
+      "title": "Auditing & Attest",
+      "description": "Comprehensive auditing services to ensure financial accuracy and compliance.",
+      "href": "/auditing-attest"
+    },
+    {
+      "icon": "Calculator",
+      "title": "Accounting",
+      "description": "Expert accounting solutions to keep your finances organized and optimized.",
+      "href": "/accounting"
+    },
+    {
+      "icon": "BarChart",
+      "title": "Start a Business",
+      "description": "Streamline and improve your business operations for maximum efficiency.",
+      "href": "/start-business"
+    },
+    {
+      "icon": "FileText",
+      "title": "Direct Taxation",
+      "description": "Professional income tax services for individuals and businesses.",
+      "href": "/direct-taxation"
+    },
+    {
+      "icon": "PiggyBank",
+      "title": "Financial Advisory Services",
+      "description": "Tailored financial services to help you achieve your financial goals.",
+      "href": "/financial-advisory"
+    },
+    {
+      "icon": "Scale",
+      "title": "Corporate Advisory",
+      "description": "Expert legal advice and services for all aspects of corporate law.",
+      "href": "/corporate-advisory"
+    },
+    {
+      "icon":"BarChart",
+      "title":"GST and Custom Duty",
+      "description":"Expert advice and services for all aspects of GST and Custom Duty.",
+      "href":"/gst-custom"
+    }
+  ]
+}
