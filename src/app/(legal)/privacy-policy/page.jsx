@@ -86,7 +86,7 @@ const PrivacyPolicyPage = () => {
           <p className="text-gray-300 mb-6">
             We may update this Privacy Policy from time to time. We will notify
             you of any changes by posting the new Privacy Policy on this page
-            and updating the "Last Updated" date at the top of this Privacy
+            and updating the &quot;Last Updated&quot; date at the top of this Privacy
             Policy.
           </p>
           <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
