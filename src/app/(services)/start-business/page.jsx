@@ -19,7 +19,7 @@ const StartBusiness = () => {
             Starting a Business? Trust in Our Expertise.
           </h1>
           <p className="text-xl text-gray-300 mb-8">
-            Whether you're launching a proprietorship or establishing a company,
+            Whether you&apos;re launching a proprietorship or establishing a company,
             navigating legal compliance is essential. At{" "}
             <span className="font-bold">LKA</span>, we specialize in providing
             comprehensive support for initiating businesses, ensuring meticulous
