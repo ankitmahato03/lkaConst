@@ -41,7 +41,7 @@ const PrivacyPolicyPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white pt-24">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-100 text-gray-900 pt-24">
       <div className="container mx-auto px-4 py-12">
         <motion.h1
           className="text-4xl md:text-5xl font-bold mb-6 text-center text-[#1EE05B]"
@@ -50,7 +50,7 @@ const PrivacyPolicyPage = () => {
           Privacy Policy
         </motion.h1>
         <motion.p
-          className="text-xl text-gray-300 mb-12 text-center max-w-3xl mx-auto"
+          className="text-xl text-gray-800 mb-12 text-center max-w-3xl mx-auto"
           {...fadeIn}
           transition={{ delay: 0.2 }}
         >
@@ -63,39 +63,43 @@ const PrivacyPolicyPage = () => {
           {sections.map((section, index) => (
             <motion.div
               key={section.title}
-              className="bg-gray-800 p-6 rounded-lg shadow-lg"
+              className="bg-white p-6 rounded-lg shadow-lg border border-gray-200"
               {...fadeIn}
               transition={{ delay: 0.2 + index * 0.1 }}
             >
               <div className="flex items-center mb-4">
                 <section.icon className="w-8 h-8 text-[#1EE05B] mr-3" />
-                <h2 className="text-2xl font-semibold">{section.title}</h2>
+                <h2 className="text-2xl font-semibold text-gray-900">
+                  {section.title}
+                </h2>
               </div>
-              <p className="text-gray-300">{section.content}</p>
+              <p className="text-gray-800">{section.content}</p>
             </motion.div>
           ))}
         </div>
 
         <motion.div
-          className="bg-gray-800 p-8 rounded-lg shadow-lg"
+          className="bg-white p-8 rounded-lg shadow-lg border border-gray-200"
           {...fadeIn}
           transition={{ delay: 0.6 }}
         >
-          <h2 className="text-2xl font-semibold mb-4">
+          <h2 className="text-2xl font-semibold mb-4 text-gray-900">
             Changes to This Privacy Policy
           </h2>
-          <p className="text-gray-300 mb-6">
+          <p className="text-gray-800 mb-6">
             We may update this Privacy Policy from time to time. We will notify
             you of any changes by posting the new Privacy Policy on this page
             and updating the &quot;Last Updated&quot; date at the top of this
             Privacy Policy.
           </p>
-          <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
-          <p className="text-gray-300 mb-6">
+          <h2 className="text-2xl font-semibold mb-4 text-gray-900">
+            Contact Us
+          </h2>
+          <p className="text-gray-800 mb-6">
             If you have any questions about this Privacy Policy, please contact
             us at:
           </p>
-          <ul className="list-disc list-inside text-gray-300 mb-6">
+          <ul className="list-disc list-inside text-gray-800 mb-6">
             <li>Email: privacy@lka.com</li>
             <li>Phone: +1 (555) 123-4567</li>
             <li>Address: 123 Privacy Lane, Secure City, ST 12345</li>
@@ -106,7 +110,7 @@ const PrivacyPolicyPage = () => {
         </motion.div>
 
         <motion.p
-          className="text-center text-gray-400 mt-12"
+          className="text-center text-gray-500 mt-12"
           {...fadeIn}
           transition={{ delay: 0.8 }}
         >

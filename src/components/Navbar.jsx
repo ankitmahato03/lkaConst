@@ -13,12 +13,15 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Button } from "./ui/button";
 
 const irishgrover = localFont({ src: "../app/fonts/IrishGrover.woff" });
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,20 +39,16 @@ const Navbar = () => {
     };
   }, []);
 
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   const navItems = [
-    {
-      title: "Home",
-      href: "/",
-    },
-    {
-      title: "About",
-      href: "/about",
-    },
-    {
-      title: "Our Team",
-      href: "/our-team",
-    },
+    { title: "Home", href: "/" },
+    { title: "About", href: "/about" },
+    { title: "Our Team", href: "/our-team" },
   ];
+
   const services = [
     { title: "Auditing & Attest", href: "/auditing-attest" },
     { title: "Accounting", href: "/accounting" },
@@ -62,8 +61,10 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className={`w-full fixed top-0 left-0 px-4 sm:px-6 lg:px-[100px] py-3 flex flex-row justify-between items-center transition-colors duration-300 z-50 ${
-        isScrolled ? "bg-[#1a1a1a] shadow-lg" : "bg-transparent"
+      className={`w-full fixed top-0 left-0 px-4 sm:px-6 lg:px-[100px] py-3 flex flex-row justify-between items-center transition-all duration-300 z-50 ${
+        isScrolled
+          ? "bg-[#1a1a1a]/70 backdrop-blur-lg shadow-lg"
+          : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -85,7 +86,9 @@ const Navbar = () => {
           {navItems.map((item, index) => (
             <motion.li
               key={index}
-              className="cursor-pointer text-white hover:text-[#1EE05B] transition-colors"
+              className={`cursor-pointer hover:text-[#1EE05B] transition-colors ${
+                isScrolled ? "text-white" : "text-black"
+              }`}
               whileHover={{ scale: 1.1 }}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -99,7 +102,11 @@ const Navbar = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent text-white hover:text-[#1EE05B] transition-colors text-[18px]">
+                <NavigationMenuTrigger
+                  className={`bg-transparent hover:text-[#1EE05B] transition-colors text-[18px] ${
+                    isScrolled ? "text-white" : "text-black"
+                  }`}
+                >
                   Services
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -134,89 +141,85 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Button */}
-      <button
-        className="lg:hidden text-white focus:outline-none z-50 relative"
+      {/* <button
+        className={`lg:hidden focus:outline-none z-50 relative ${
+          isScrolled ? "text-white" : "text-black"
+        }`}
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-label="Toggle mobile menu"
       >
-        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
+        {isMobileMenuOpen ? (
+          <X size={24} className="text-white" />
+        ) : (
+          <Menu size={24} />
+        )}
+      </button> */}
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            className="fixed inset-0 bg-[#1a1a1a] z-40 lg:hidden"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+      <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+        <SheetTrigger asChild>
+          <Button
+            variant="ghost"
+            className={`lg:hidden ${isScrolled ? "text-white" : "text-black"}`}
           >
-            <div className="flex flex-col items-center justify-center h-full">
-              {navItems.map((item, index) => (
-                <motion.a
-                  key={item}
-                  href={item.href}
-                  className="text-white text-2xl mb-4 hover:text-[#1EE05B] transition-colors"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  {item.title}
-                </motion.a>
-              ))}
-              <motion.div
-                className="mb-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: navItems.length * 0.1 }}
+            <Menu className="h-20" />
+            <span className="sr-only">Toggle menu</span>
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+          <nav className="flex flex-col gap-4">
+            {navItems.map((item, index) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                className="block px-2 py-1 text-lg"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
-                <NavigationMenu>
-                  <NavigationMenuList>
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger className="bg-transparent text-white hover:text-[#1EE05B] transition-colors text-2xl">
-                        Services
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <ul className="grid gap-3 p-6 w-[200px]">
-                          {services.map((service, index) => (
-                            <motion.li
-                              key={service}
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: index * 0.05 }}
+                {item.title}
+              </Link>
+            ))}
+            <NavigationMenu orientation="vertical">
+              <NavigationMenuList className="flex-col items-start">
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-lg">
+                    Services
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid gap-3 p-4 w-[200px]">
+                      {services.map((service) => (
+                        <li key={service.title}>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              href={service.href}
+                              onClick={() => setIsMobileMenuOpen(false)}
                             >
-                              <NavigationMenuLink asChild>
-                                <Link
-                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                  href={service.href}
-                                >
-                                  <div className="text-sm font-medium leading-none">
-                                    {service.title}
-                                  </div>
-                                </Link>
-                              </NavigationMenuLink>
-                            </motion.li>
-                          ))}
-                        </ul>
-                      </NavigationMenuContent>
-                    </NavigationMenuItem>
-                  </NavigationMenuList>
-                </NavigationMenu>
-              </motion.div>
-              <motion.button
-                className="bg-[#1EE05B] text-black px-6 py-3 rounded-full hover:bg-[#19B84A] transition-colors text-xl"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: (navItems.length + 1) * 0.1 }}
+                              <div className="text-sm font-medium leading-none">
+                                {service.title}
+                              </div>
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+            <Button
+              asChild
+              className="bg-[#1EE05B] text-black hover:bg-[#19B84A] w-full"
+            >
+              <Link
+                href="/contact-us"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
-                <Link href={"/contact-us"}>Contact Us</Link>
-              </motion.button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                Contact Us
+              </Link>
+            </Button>
+          </nav>
+        </SheetContent>
+      </Sheet>
     </motion.nav>
   );
 };

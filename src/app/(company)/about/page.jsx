@@ -3,24 +3,24 @@ import { Button } from "@/components/ui/button";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white pt-24">
+    <div className="min-h-screen bg-white text-black pt-24">
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">About LKA</h1>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-700 mb-8">
               LKA is a leading provider of comprehensive financial and business
-              solutions. Since our founding in 2010, we&apos;ve been dedicated to
-              empowering businesses and individuals with expert guidance,
+              solutions. Since our founding in 2010, we&apos;ve been dedicated
+              to empowering businesses and individuals with expert guidance,
               innovative strategies, and unwavering support.
             </p>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-700 mb-8">
               Our team of seasoned professionals brings together a wealth of
               experience across various industries, allowing us to offer
               tailored solutions that address the unique challenges and
               opportunities our clients face.
             </p>
-            <Button className="bg-[#1EE05B] hover:bg-[#19B84A] text-black">
+            <Button className="bg-[#1EE05B] hover:bg-[#19B84A] text-white">
               Learn More About Our Services
             </Button>
           </div>
@@ -53,9 +53,9 @@ export default function AboutPage() {
                   "We embrace innovation to deliver cutting-edge solutions.",
               },
             ].map((value, index) => (
-              <div key={index} className="bg-[#2a2a2a] p-6 rounded-lg">
+              <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-lg">
                 <h3 className="text-xl font-semibold mb-4">{value.title}</h3>
-                <p className="text-gray-300">{value.description}</p>
+                <p className="text-gray-700">{value.description}</p>
               </div>
             ))}
           </div>

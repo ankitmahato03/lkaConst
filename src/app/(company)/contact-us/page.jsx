@@ -31,7 +31,7 @@ const ContactUsPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white pt-24">
+    <div className="min-h-screen bg-white text-black pt-24">
       <div className="container mx-auto px-4 py-12">
         <motion.h1
           className="text-4xl md:text-5xl font-bold mb-6 text-center text-[#1EE05B]"
@@ -40,15 +40,15 @@ const ContactUsPage = () => {
           Contact Us
         </motion.h1>
         <motion.p
-          className="text-xl text-gray-300 mb-12 text-center max-w-3xl mx-auto"
+          className="text-xl text-gray-700 mb-12 text-center max-w-3xl mx-auto"
           {...fadeIn}
           transition={{ delay: 0.2 }}
         >
-          We&apos;re here to help and answer any question you might have. We look
-          forward to hearing from you.
+          We&apos;re here to help and answer any question you might have. We
+          look forward to hearing from you.
         </motion.p>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-2 lg:px-12">
           <motion.div
             className="space-y-8"
             {...fadeIn}
@@ -57,19 +57,19 @@ const ContactUsPage = () => {
             <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
             {contactInfo.map((item, index) => (
               <div key={item.title} className="flex items-start space-x-4">
-                <div className="bg-gray-800 p-3 rounded-full">
+                <div className="bg-gray-100 p-3 rounded-full">
                   <item.icon className="w-6 h-6 text-[#1EE05B]" />
                 </div>
                 <div>
                   <h3 className="font-semibold">{item.title}</h3>
-                  <p className="text-gray-300">{item.content}</p>
+                  <p className="text-gray-700">{item.content}</p>
                 </div>
               </div>
             ))}
           </motion.div>
 
           <motion.div
-            className="bg-gray-800 p-8 rounded-lg shadow-lg"
+            className="bg-gray-100 p-8 rounded-lg shadow-lg"
             {...fadeIn}
             transition={{ delay: 0.4 }}
           >
@@ -77,35 +77,22 @@ const ContactUsPage = () => {
             <form className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>
-                <Input
-                  id="name"
-                  placeholder="Your Name"
-                  className="bg-gray-700 border-gray-600 text-white"
-                />
+                <Input id="name" placeholder="Your Name" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="your@email.com"
-                  className="bg-gray-700 border-gray-600 text-white"
-                />
+                <Input id="email" type="email" placeholder="your@email.com" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="subject">Subject</Label>
-                <Input
-                  id="subject"
-                  placeholder="How can we help?"
-                  className="bg-gray-700 border-gray-600 text-white"
-                />
+                <Input id="subject" placeholder="How can we help?" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="message">Message</Label>
                 <Textarea
                   id="message"
                   placeholder="Your message here..."
-                  className="bg-gray-700 border-gray-600 text-white min-h-[150px]"
+                  className="min-h-[150px]"
                 />
               </div>
               <Button className="w-full bg-[#1EE05B] hover:bg-[#19B84A] text-black">

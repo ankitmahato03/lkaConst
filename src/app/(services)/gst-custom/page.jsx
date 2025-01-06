@@ -12,13 +12,13 @@ const fadeIn = {
 
 const GSTAndCustom = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white pt-24 px-4">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-100 text-gray-900 pt-24 px-4">
       <div className="container mx-auto px-4 py-12">
         <motion.section className="mb-16" {...fadeIn}>
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#1EE05B]">
             Goods & Services Tax (GST) And Custom Duty
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-800 mb-8">
             At <span className="font-bold">LKA</span>, we house a dedicated team
             of experts specializing in GST and Custom Duty, staffed by seasoned
             experts proficient in these domains. Our commitment is to ensure
@@ -58,17 +58,17 @@ const GSTAndCustom = () => {
                 transition={{ delay: index * 0.1 }}
               >
                 <CheckCircle className="text-[#1EE05B] w-5 h-5 flex-shrink-0" />
-                <span>{service}</span>
+                <span className="text-gray-800">{service}</span>
               </motion.div>
             ))}
           </div>
         </motion.section>
 
         <motion.section className="mb-16" {...fadeIn}>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-800 mb-8">
             We prioritize client success by providing meticulous guidance and
             effective solutions tailored to meet their specific needs in GST
-            matters
+            matters.
           </p>
         </motion.section>
       </div>

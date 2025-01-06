@@ -28,7 +28,7 @@ const features = [
 
 export default function About() {
   return (
-    <section className="py-24 bg-[#1a1a1a] text-white">
+    <section className="py-24 bg-white text-black">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -43,9 +43,9 @@ export default function About() {
                 Transforming Ideas into
                 <span className="text-[#1EE05B]"> Digital Reality</span>
               </h2>
-              <p className="text-gray-400 text-lg">
-                Since 2010, we&apos;ve been helping businesses transform their ideas
-                into powerful digital solutions. Our mission is to deliver
+              <p className="text-gray-600 text-lg">
+                Since 2010, we&apos;ve been helping businesses transform their
+                ideas into powerful digital solutions. Our mission is to deliver
                 innovation that matters.
               </p>
             </div>
@@ -67,7 +67,7 @@ export default function About() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">{feature.title}</h3>
-                    <p className="text-gray-400">{feature.description}</p>
+                    <p className="text-gray-600">{feature.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -75,7 +75,7 @@ export default function About() {
 
             <Button
               size="lg"
-              className="bg-[#1EE05B] hover:bg-[#19B84A] text-black"
+              className="bg-[#1EE05B] hover:bg-[#19B84A] text-white"
             >
               Learn More About Us
             </Button>
@@ -95,7 +95,7 @@ export default function About() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
             </div>
           </motion.div>
         </div>

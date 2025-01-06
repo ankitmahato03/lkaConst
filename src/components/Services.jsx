@@ -67,12 +67,12 @@ const services = [
     description:
       "Comprehensive solutions tailored to meet your business needs and drive success.",
     href: "/gst-custom",
-  }
+  },
 ];
 
 export default function Services() {
   return (
-    <section className="py-24 bg-[#1a1a1a] text-white">
+    <section className="py-24 bg-white text-black">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -82,7 +82,7 @@ export default function Services() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">Our Services</h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-600 text-lg">
             Comprehensive solutions tailored to meet your business needs and
             drive success.
           </p>
@@ -97,18 +97,18 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
             >
-              <Card className="bg-[#2a2a2a] border-0 text-white h-full hover:bg-[#2a2a2a]/80 transition-colors">
+              <Card className="bg-gray-100 border border-gray-200 text-black h-full hover:bg-gray-200 transition-colors">
                 <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-[#1EE05B]/10 flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-[#1EE05B]" />
+                  <div className="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center mb-4">
+                    <service.icon className="w-6 h-6 text-green-500" />
                   </div>
                   <CardTitle className="text-xl mb-2">
                     {service.title}
                   </CardTitle>
-                  <CardDescription className="text-gray-400">
+                  <CardDescription className="text-gray-600">
                     {service.description}
                   </CardDescription>
-                  <Button className="w-1/3 bg-[#1EE05B] text-black hover:text-white">
+                  <Button className="w-1/3 bg-green-500 text-white hover:bg-green-600">
                     <Link href={service.href}>Read more</Link>
                   </Button>
                 </CardHeader>
