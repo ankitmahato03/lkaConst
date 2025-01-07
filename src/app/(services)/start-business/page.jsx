@@ -12,15 +12,15 @@ const fadeIn = {
 
 const StartBusiness = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white pt-24 px-4">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-100 text-gray-900 pt-24 px-4">
       <div className="container mx-auto px-4 py-12">
         <motion.section className="mb-16" {...fadeIn}>
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#1EE05B]">
             Starting a Business? Trust in Our Expertise.
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Whether you&apos;re launching a proprietorship or establishing a company,
-            navigating legal compliance is essential. At{" "}
+          <p className="text-xl text-gray-800 mb-8">
+            Whether you&apos;re launching a proprietorship or establishing a
+            company, navigating legal compliance is essential. At{" "}
             <span className="font-bold">LKA</span>, we specialize in providing
             comprehensive support for initiating businesses, ensuring meticulous
             financial transaction management, and facilitating accurate tax
@@ -60,14 +60,14 @@ const StartBusiness = () => {
                 transition={{ delay: index * 0.1 }}
               >
                 <CheckCircle className="text-[#1EE05B] w-5 h-5 flex-shrink-0" />
-                <span>{service}</span>
+                <span className="text-gray-800">{service}</span>
               </motion.div>
             ))}
           </div>
         </motion.section>
 
         <motion.section className="mb-16" {...fadeIn}>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-800 mb-8">
             Count on our expertise to navigate the complexities of business
             initiation, enabling you to focus on your entrepreneurial goals with
             confidence.

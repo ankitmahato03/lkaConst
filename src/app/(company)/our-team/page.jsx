@@ -37,10 +37,12 @@ const teamMembers = [
 
 export default function OurTeamPage() {
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white pt-24">
+    <div className="min-h-screen bg-white text-black pt-24">
       <div className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Team</h1>
-        <p className="text-xl text-gray-300 mb-12 max-w-3xl">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
+          Our Team
+        </h1>
+        <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto text-center">
           Meet the dedicated professionals behind LKA. Our team brings together
           a wealth of experience and expertise to deliver exceptional services
           to our clients.
@@ -49,7 +51,7 @@ export default function OurTeamPage() {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-[#2a2a2a] rounded-lg overflow-hidden"
+              className="bg-gray-100 border border-gray-300 rounded-lg overflow-hidden shadow-lg"
             >
               <Image
                 src={member.image}
@@ -60,12 +62,12 @@ export default function OurTeamPage() {
               />
               <div className="p-6">
                 <h2 className="text-2xl font-semibold mb-2">{member.name}</h2>
-                <p className="text-gray-300 mb-4">{member.position}</p>
+                <p className="text-gray-600 mb-4">{member.position}</p>
                 <div className="flex space-x-4">
-                  <a href="#" className="text-gray-400 hover:text-[#1EE05B]">
+                  <a href="#" className="text-gray-500 hover:text-blue-600">
                     <LinkedIn className="w-6 h-6" />
                   </a>
-                  <a href="#" className="text-gray-400 hover:text-[#1EE05B]">
+                  <a href="#" className="text-gray-500 hover:text-blue-400">
                     <Twitter className="w-6 h-6" />
                   </a>
                 </div>

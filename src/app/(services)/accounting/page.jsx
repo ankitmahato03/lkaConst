@@ -12,13 +12,13 @@ const fadeIn = {
 
 const Accounting = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white pt-24 px-4">
+    <div className="min-h-screen bg-white text-black pt-24 px-4">
       <div className="container mx-auto px-4 py-12">
         <motion.section className="mb-16" {...fadeIn}>
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#1EE05B]">
             Accounting Advisory Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-700 mb-8">
             Accurate accounting forms the backbone of every business. From small
             enterprises to large corporations, maintaining precise financial
             records is essential for seamless operations and legal compliance.
@@ -60,7 +60,7 @@ const Accounting = () => {
                 transition={{ delay: index * 0.1 }}
               >
                 <CheckCircle className="text-[#1EE05B] w-5 h-5 flex-shrink-0" />
-                <span>{service}</span>
+                <span className="text-gray-700">{service}</span>
               </motion.div>
             ))}
           </div>

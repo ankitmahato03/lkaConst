@@ -13,13 +13,13 @@ const fadeIn = {
 
 const AuditingAttestPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white pt-24 px-4">
+    <div className="min-h-screen bg-white text-black pt-24 px-4">
       <div className="container mx-auto px-4 py-12">
         <motion.section className="mb-16" {...fadeIn}>
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#1EE05B]">
             Audit & Assurance
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-700 mb-8">
             At LKA, we provide comprehensive Audit & Assurance (A&A) services
             tailored for traders and industrialists of all sizes and sectors.
             Our team strictly adheres to audit norms to ensure precise and
@@ -53,14 +53,14 @@ const AuditingAttestPage = () => {
             ].map((item, index) => (
               <motion.div
                 key={index}
-                className="bg-gray-800 p-6 rounded-lg shadow-lg"
+                className="bg-white p-6 rounded-lg shadow-lg border border-gray-300"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <h3 className="text-xl font-semibold mb-4 text-[#1EE05B]">
                   {item.title}
                 </h3>
-                <p className="text-gray-300">{item.description}</p>
+                <p className="text-gray-700">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -97,7 +97,7 @@ const AuditingAttestPage = () => {
                 transition={{ delay: index * 0.1 }}
               >
                 <CheckCircle className="text-[#1EE05B] w-5 h-5 flex-shrink-0" />
-                <span>{service}</span>
+                <span className="text-gray-700">{service}</span>
               </motion.div>
             ))}
           </div>
@@ -105,8 +105,8 @@ const AuditingAttestPage = () => {
 
         <motion.section {...fadeIn} transition={{ delay: 0.6 }}>
           <h2 className="text-3xl font-semibold mb-6">Expertise and Team</h2>
-          <div className="bg-gray-800 p-8 rounded-lg shadow-lg">
-            <p className="text-gray-300 mb-6">
+          <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-300">
+            <p className="text-gray-700 mb-6">
               Our A&A team is led by a group of approximately 30 dedicated
               professionals, including both young and experienced Chartered
               Accountants. We go beyond traditional A&A procedures, providing

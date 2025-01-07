@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#1a1a1a] to-[#2a2a2a] text-white overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center bg-white text-black overflow-hidden">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
         <motion.div
           className="flex flex-col w-full lg:w-1/2 justify-center items-start pt-12 pb-24 px-6"
@@ -23,7 +23,7 @@ export default function Hero() {
             Innovate with <span className="text-[#1EE05B]">LKA</span>
           </motion.h1>
           <motion.p
-            className="text-xl md:text-2xl mb-8 text-gray-300"
+            className="text-xl md:text-2xl mb-8 text-gray-700"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}

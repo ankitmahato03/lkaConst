@@ -9,8 +9,6 @@ import {
   LinkedinIcon as LinkedIn,
   Instagram,
 } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 
 const footerLinks = [
   {
@@ -51,7 +49,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1a1a1a] text-white px-4">
+    <footer className="bg-white text-black px-4">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <motion.div
@@ -62,7 +60,7 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-2xl font-bold mb-4">LKA</h2>
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-600 mb-4">
               Empowering businesses with innovative financial solutions and
               expert guidance.
             </p>
@@ -71,7 +69,7 @@ const Footer = () => {
                 <motion.a
                   key={index}
                   href={social.href}
-                  className="text-gray-400 hover:text-[#1EE05B] transition-colors"
+                  className="text-gray-600 hover:text-green-600 transition-colors"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -101,7 +99,7 @@ const Footer = () => {
                   >
                     <Link
                       href={link.href}
-                      className="text-gray-400 hover:text-[#1EE05B] transition-colors"
+                      className="text-gray-600 hover:text-green-600 transition-colors"
                     >
                       {link.link}
                     </Link>
@@ -113,14 +111,14 @@ const Footer = () => {
         </div>
 
         <motion.div
-          className="mt-12 pt-8 border-t border-gray-800"
+          className="mt-12 pt-8 border-t border-gray-300"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <div className="flex flex-col md:flex-row justify-center items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
+            <p className="text-gray-600 text-sm mb-4 md:mb-0">
               © {new Date().getFullYear()} LKA. All rights reserved. Design by{" "}
               <span>
                 <Link href={"https://www.averotec.com/"} target="_blank">
